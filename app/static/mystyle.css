@@ -1,0 +1,95 @@
+.navbar-brand {
+    color: white;
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+
+body { 
+    font-family: "Times New Roman", Times, serif;
+    padding-top: 70px;
+    background: whitesmoke;
+    color: black;
+ }
+
+#postit,li{
+  list-style:none;
+  font-size:100%;
+  font-weight:bold;
+  
+}
+#postit{
+  overflow:scroll;
+  padding:1em;
+}
+#postit li a.important {
+    text-decoration:none;
+    color:#000;
+    background:#ffc;
+    display:block;
+    height:10em;
+    width:10em;
+    padding:1em;
+    /* Firefox */
+    -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+    /* Safari+Chrome */
+    -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    /* Opera */
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    -moz-transition:-moz-transform .15s linear;
+    -o-transition:-o-transform .15s linear;
+    -webkit-transition:-webkit-transform .15s linear;
+}
+#postit li{
+  margin:2em;
+  float:left;
+}
+
+#postit li:nth-child(even) a.important {
+    -o-transform:rotate(4deg);
+    -webkit-transform:rotate(4deg);
+    -moz-transform:rotate(4deg);
+    position:relative;
+    top:5px;
+    background:#cfc;
+  }
+#postit li:nth-child(3n) a.important {
+    -o-transform:rotate(-3deg);
+    -webkit-transform:rotate(-3deg);
+    -moz-transform:rotate(-3deg);
+    position:relative;
+    top:-5px;
+    background:#ccf;
+  }
+#postit li:nth-child(5n) a.important {
+  -o-transform:rotate(5deg);
+  -webkit-transform:rotate(5deg);
+  -moz-transform:rotate(5deg);
+  position:relative;
+  top:-10px;
+}
+
+#postit li:nth-child(7n) a.important {
+    -o-transform:rotate(7deg);
+    -webkit-transform:rotate(7deg);
+    -moz-transform:rotate(7deg);
+    position:relative;
+    top:-10px;
+  }
+
+#postit li a.important:hover,#postit li a.important:focus{
+  -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
+  -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+  box-shadow:10px 10px 7px rgba(0,0,0,.7);
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  position:relative;
+  z-index:5;
+}
+
+h1{
+    text-transform: capitalize;
+}
