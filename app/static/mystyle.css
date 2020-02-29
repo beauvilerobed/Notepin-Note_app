@@ -14,6 +14,37 @@ body {
     color: black;
  }
 
+ input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #000000;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: grey;
+}
+
+div.form {
+  border-radius: 5px;
+  padding: 20px;
+}
+
+
 #postit,li{
   list-style:none;
   font-size:100%;
@@ -90,6 +121,10 @@ body {
   z-index:5;
 }
 
-h1{
+h1 {
     text-transform: capitalize;
+}
+
+h2 {
+  text-align: center;
 }

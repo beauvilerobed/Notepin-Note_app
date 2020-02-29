@@ -10,6 +10,7 @@ from werkzeug.urls import url_parse
 from app import db
 from app.forms import RegistrationForm
 from app.forms import PostForm
+from app.forms import PostForm1
 from app.models import Post
 
 #//Post submission form 
@@ -201,3 +202,20 @@ def delete(id, username):
         db.session.commit()
         return redirect(url_for('user', username=username))
 #end of follow and unfollow routes//
+
+@app.route('/update/<int:id>/<username>', methods=['GET', 'POST'])
+def update(id, username):
+    task = Post.query.get_or_404(id)
+
+    if request.method == 'POST':
+        task.body = request.form['content']
+
+        try:
+            db.session.commit()
+            return redirect(url_for('user', username=username))
+        except:
+            return 'there was an issue updating your task'
+
+    else:
+        return render_template('update.html', task=task)
+

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+<h2 class="task">Add task</h2>
+
+<div class="form">
+  <form action="" method="POST">
+    <input type="text" id="fname" name="content" value="{{task.body}}" placeholder="Your update..">
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+{% endblock %}

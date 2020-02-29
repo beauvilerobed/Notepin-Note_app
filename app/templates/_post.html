@@ -1,7 +1,9 @@
 
   <li>
     <a class="important" href="{{ url_for('user', username=post.author.username) }}">
-    {{ post.body }}
+    <div><p>{{ post.body }}</p></div>
     </a>
     <a class="least_important" href="{{ url_for('delete', id=post.id, username=post.author.username) }}" class="delete"> Delete</a>
+    <br>
+    <a href="{{ url_for('update', id=post.id, username=post.author.username) }}" class="update">Update</a>
 </li>
